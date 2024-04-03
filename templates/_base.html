@@ -12,13 +12,13 @@
 <body>
     {% if user.is_authenticated %}
     <p>hello {{ user.username }}</p> | 
-    <form action="{% url 'logout' %}" method="post">
+    <form action="{% url 'account_logout' %}" method="post">
         {% csrf_token %}
         <button type="submit">logout</button>
     </form>
     {% else %}
-    <a href="{% url 'login' %}">login</a> | 
-    <a href="{% url 'signup' %}">sign up</a>
+    <a href="{% url 'account_login' %}">login</a> | 
+    <a href="{% url 'account_signup' %}">sign up</a>
     {% endif %}
     {% block content %}{% endblock content %}
 
