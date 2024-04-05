@@ -25,7 +25,7 @@ class ProductDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['comments'] = Comment.active_posts.filter(product=get_object_or_404(Product, pk=self.kwargs['pk']))
         context['form'] = CommentForm()
-        # context['cart_form'] = AddProductToCartForm()
+        context['cart_form'] = AddProductToCartForm()
         return context
     
     # def post(self, request, *args, **kwargs):
