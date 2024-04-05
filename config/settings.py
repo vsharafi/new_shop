@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     # third party apps
     "crispy_forms",
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'rosetta',
 
 
     # my app
@@ -60,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
 ]
@@ -133,19 +136,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
-
+#LANGUAGE_CODE='en-us'
+LANGUAGE_CODE='fa'
+#TIME_ZONE='UTC'
+Time_Zone='Asia/Tehran'
+USE_I18N=True
+USE_L10N=True
+USE_TZ=True
+LOCALE_PATHS = (BASE_DIR.joinpath('products/locale'), BASE_DIR.joinpath('templates/locale'), BASE_DIR.joinpath('accounts/locale'))
+LANGUAGES = [('en', 'English'), ('fa', 'Persian'),]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIR = [
+    str(BASE_DIR.joinpath('static'))
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -160,9 +167,17 @@ LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_EMAIL_REQUIRED = False
 
-
-
-
 # crispy forms config
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+from django.contrib import messages
+# messages tags:
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
