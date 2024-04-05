@@ -6,6 +6,7 @@ from .models import Product, Comment
 from .forms import CommentForm
 from django.contrib import messages
 from django.utils.translation import gettext as _
+from cart.forms import AddProductToCartForm
 
 
 class ProductListView(ListView):
@@ -24,6 +25,7 @@ class ProductDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['comments'] = Comment.active_posts.filter(product=get_object_or_404(Product, pk=self.kwargs['pk']))
         context['form'] = CommentForm()
+        # context['cart_form'] = AddProductToCartForm()
         return context
     
     # def post(self, request, *args, **kwargs):
