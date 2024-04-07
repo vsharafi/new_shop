@@ -8,15 +8,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 15:59+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-04-07 15:22+0330\n"
+"PO-Revision-Date: 2024-04-07 15:23-0500\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\_base.html:50
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\_base.html:53
 msgid "Home"
 msgstr "خانه"
+
+#: .\_base.html:95
+msgid "hello"
+msgstr "سلام"
+
+#: .\_base.html:98
+msgid "Logout"
+msgstr "خروج"
+
+#: .\_base.html:101
+msgid "Profile"
+msgstr "حساب کاربری"
+
+#: .\_base.html:105
+msgid "login"
+msgstr "ورود"
+
+#: .\_base.html:108
+msgid "Sign up"
+msgstr "ثبت نام"
+
+#: .\_base.html:189
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:207 .\_base.html:215
+msgid "$"
+msgstr "تومان"
+
+#: .\_base.html:214
+msgid "Total"
+msgstr "جمع کل"
+
+#: .\_base.html:218
+msgid "Go to Cart"
+msgstr "مشاهده سبد خرید"
+
+#: .\_base.html:219
+msgid "Checkout"
+msgstr "پرداخت"

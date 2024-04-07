@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .cart import Cart
 from .forms import AddProductToCartForm
 from products.models import Product
+from django.views.decorators.http import require_POST
 
 
 def cart_detail_view(request):
@@ -15,7 +16,7 @@ def cart_detail_view(request):
 
     return render(request, 'cart/cart_detail.html', {'cart': cart})
 
-
+@require_POST
 def add_to_cart_view(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)

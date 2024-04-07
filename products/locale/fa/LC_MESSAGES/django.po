@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 22:48+0330\n"
-"PO-Revision-Date: 2024-04-04 22:49-0500\n"
+"POT-Creation-Date: 2024-04-07 14:16+0330\n"
+"PO-Revision-Date: 2024-04-07 14:16-0500\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,20 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\models.py:26
+#: .\models.py:30
 msgid "Comment Text"
 msgstr "متن نظر"
 
-#: .\models.py:32
+#: .\models.py:36
 msgid "Stars"
 msgstr "امتیاز"
 
-#: .\templates\products\product_detail.html:37
+#: .\templates\products\product_detail.html:38
 #: .\templates\products\product_list.html:54
 #: .\templates\products\product_list.html:57
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:168
+#: .\templates\products\product_detail.html:49
+#: .\templates\products\product_list.html:63
+msgid "Add to Cart"
+msgstr "افزودن به سبد خرید"
+
+#: .\templates\products\product_detail.html:172
 msgid "Send"
 msgstr "ارسال"
+
+#: .\templates\products\product_detail.html:175
+#| msgid "for writing your comment please login"
+msgid "For writing your comment please login"
+msgstr "برای ارسال نظر لطفا وارد حساب کاربری خود شوید"
+
+#: .\templates\products\product_detail.html:176
+msgid "login"
+msgstr "ورود"
+
+#: .\views.py:52
+msgid "Your comment has sent successfully."
+msgstr "دیدگاه شما با موفقیت ثبت شد"
