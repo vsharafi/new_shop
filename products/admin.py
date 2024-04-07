@@ -12,7 +12,8 @@ class CommentTabularInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     model = Product
-    list_display = ('title', 'description', 'datetime_created', 'datetime_modified', 'price', 'active', 'id')
+    list_display = ('title', 'description', 'datetime_created', 'datetime_modified', 'price', 'active',
+                    'image', 'id')
     inlines = [
         CommentTabularInline,
     ]

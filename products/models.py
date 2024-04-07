@@ -12,6 +12,7 @@ class Product(models.Model):
     datetime_modified = models.DateTimeField(auto_now=True)
     price = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='cover/', blank=True, verbose_name=_('Product_image'))
 
     def __str__(self):
         return self.title

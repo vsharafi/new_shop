@@ -185,3 +185,9 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+
+# Cover Image configs
+MEDIA_URL='/media/'
+	
+MEDIA_ROOT=str(BASE_DIR.joinpath('media'))
