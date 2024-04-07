@@ -3,12 +3,14 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
+from ckeditor.fields import RichTextField
+
 
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
-
+    description = RichTextField()
+    short_description = models.TextField(blank=True)
     datetime_created = models.DateTimeField(default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
     price = models.PositiveIntegerField(default=0)

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rosetta',
+    'ckeditor',
 
 
     # my app
@@ -158,6 +159,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIR = [
     str(BASE_DIR.joinpath('static'))
 ]
+
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
