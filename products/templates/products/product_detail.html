@@ -4,6 +4,8 @@
 {% load humanize %}
 {% load persian_num %}
 {% load crispy_forms_tags %}
+{% load jalali_tags %}
+
 
 {% block page_title %}{{ product.title }}{% endblock page_title %}
 {% block content %}
@@ -113,7 +115,7 @@
                                                         <div>
                                                             <div class="review__meta">
                                                                 <strong class="review__author px-4">{{comment.author}}</strong>
-                                                                <span class="review__dash">-</span>
+                                                                <!-- <span class="review__dash">-</span> -->
                                                             </div>
                                                             <div class="product-rating">
                                                                 <div class="m-0 star-rating star-five">
@@ -123,7 +125,7 @@
                                                         </div>
                                                     </div>
                                                     <p class="review__description text-right px-4">{{comment.text}}</p>
-                                                    <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                                    <span dir="ltr" class="review__published-date px-4">{{ comment.datetime_created|to_jalali:'%Y/%B/%d _ %H:%M:%S' }}</span>
                                                 </div>
                                             </div>
                                         </li>

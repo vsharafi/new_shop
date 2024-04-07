@@ -14,6 +14,7 @@ class ProductListView(ListView):
     context_object_name = 'products'
     template_name = 'products/product_list.html'
     queryset = Product.objects.filter(active=True)
+    paginate_by = 2
 
 
 class ProductDetailView(DetailView):
